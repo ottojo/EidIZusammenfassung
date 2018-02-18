@@ -1,9 +1,17 @@
 # EidI Übung Zusammenfassung
 ## Übungsblatt 1
 ### Laufzeitberechnung
+`O(1) < O(log n) < O(√n) < O(n log n) < O(n²) O(2ⁿ) < O(n!) < O(nⁿ)`
 
 ## Blatt 2
 ### Boolsche Ausdrücke
+* `==` =
+* `!=` ≠
+* `<` <
+* `<=` ≤
+* `>` >
+* `>=` ≥
+* `!` ¬
 
 ## Blatt 3
 ### Präzedenzregeln
@@ -20,7 +28,14 @@
 11. `?:`
 12. Assignment (`=, +=, ...`)
 ### `char` handling
+* `String Character.toString(char c)`
+* * `String String.valueOf(char c)`
 ### Modulo Operator
+In Java ist `%` eigentlich der "remainder" operator...
+* `9 % 4 = 1`
+* `3 % 4 = 3`
+* `-9 % 4 = -1`
+* `-9 mod 4` sollte eigentlich `3` sein... 
 
 ## Blatt 4
 ### Schleifen
@@ -151,9 +166,7 @@ Solange `child > parent`: Tauschen von `child`mit `parent` node
 ## Blatt 13
 ### Single linked list
 Jedes Element der Liste enthält neben den Daten einen Zeiger auf das jeweils nächste Element.
-
 Die Liste besteht im Wesentlichen nur aus einem Zeiger auf das erste Element der Liste.
-
 Es kann sinnvoll sein, auch die aktuelle Länge oder einen Zeiger auf das aktuell letzte Element zu speichern.
 ### Ringliste
 Bei der Ringliste zeigt das "letzte" Element wieder auf das erste. Die Ringliste enthält daher nur einen Zeiger auf ein beliebiges Element der Liste.
