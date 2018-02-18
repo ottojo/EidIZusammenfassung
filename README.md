@@ -26,6 +26,7 @@
 ### Schleifen
 #### `foreach`
 `for (Object o: objectArray) {...}`
+
 Rest ist trivial. ∎
 ### Zufallszahlen
 `Math.random()` ↦ double ∈ [0,1)
@@ -33,8 +34,11 @@ Rest ist trivial. ∎
 ## Blatt 5
 ### Arrays
 `int[] integerArray = new int[10];`
+
 `int[] integerArray = new int[]{1, 2, 3};`
+
 `integerArray[0] = 3;`
+
 Bei der Übergabe eines Arrays als Parameter einer Funktion wird ein Pointer zu diesem Array übergeben und nicht eine Kopie dieses Arrays.
 
 ## Blatt 6
@@ -45,11 +49,13 @@ Bei der Übergabe eines Arrays als Parameter einer Funktion wird ein Pointer zu 
 ### Parameterübergabemechanismen
 #### Call by Value
 Dieses Mechanismus wird standardmäßig von Java verwendet. Dabei wird bei einem Funktionsaufruf von jedem Parameter eine Kopie erzeugt, die in der Funktion sichtbar ist. Ändern dieses Parameters innerhalb der Funktion hat keine Auswirkungen auf den Wert außerhalb der Funktion.
+
 Achtung: Anderes Verhalten bei Arrays und Objekten.
 #### Call by Reference
 Hierbei wird ein Pointer auf den jeweiligen Parameter übergeben. Zugriffe darauf innerhalb der Funktion greifen auf den gleichen Speicherbereich zu wie Zugriffe von außerhalb der Funktion.
 ### Rekursion
 Wenn bereits verstanden: Gut.
+
 Wenn nicht: Siehe "Rekursion".
 
 ## Blatt 8
@@ -86,11 +92,13 @@ Prinzip des Aufteilens eines Problems in viele kleinere Teilprobleme ("divide") 
 Tauschen eines Elements mit dem nachfolgendem, sodass diese beiden Elemente in richtiger Reihenfolge stehen.
 Dies wird über die Ganze Liste ausgeführt und dann wiederholt bis die Menge sortiert ist.
 Dies hat den Effekt dass in der ersten Iteration das größte Element "zum Ende der Liste aufsteigt" wie eine Luftblase, bei der Zweiten Iteration das Zweitgrößte und so weiter.
+
 Laufzeit: O(n)-O(n²)
 #### Shakersort
 Abwechselndes Ausführen von Bubblesort in alternierende Richtungen
 #### Insertionsort
 In jeder Iteration wird das erste unsortierte Element an der richtigen Stelle im sortierten Bereich eingefügt.
+
 Das entspricht dem manuellen Sortieren von Spielkarten bei enem Kartenspiel.
 #### Selectionsort
 In jeder Iteration wird das kleinste unsortierte Element gewählt und an das Ende des sortierten Bereichs getauscht.
@@ -143,7 +151,9 @@ Solange `child > parent`: Tauschen von `child`mit `parent` node
 ## Blatt 13
 ### Single linked list
 Jedes Element der Liste enthält neben den Daten einen Zeiger auf das jeweils nächste Element.
+
 Die Liste besteht im Wesentlichen nur aus einem Zeiger auf das erste Element der Liste.
+
 Es kann sinnvoll sein, auch die aktuelle Länge oder einen Zeiger auf das aktuell letzte Element zu speichern.
 ### Ringliste
 Bei der Ringliste zeigt das "letzte" Element wieder auf das erste. Die Ringliste enthält daher nur einen Zeiger auf ein beliebiges Element der Liste.
