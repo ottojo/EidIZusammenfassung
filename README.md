@@ -1,7 +1,6 @@
 # EidI Übung Zusammenfassung
 ## Übungsblatt 1
 ### Laufzeitberechnung
-`O(1) < O(log n) < O(√n) < O(n log n) < O(n²) O(2ⁿ) < O(n!) < O(nⁿ)`
 
 ## Blatt 2
 ### Boolsche Ausdrücke
@@ -59,8 +58,10 @@ Bei der Übergabe eines Arrays als Parameter einer Funktion wird ein Pointer zu 
 ## Blatt 6
 ### Überdeckung, Variablen
 
+
 ## Blatt 7
 ### O-Notation
+`O(1) < O(log n) < O(√n) < O(n log n) < O(n²) O(2ⁿ) < O(n!) < O(nⁿ)`
 ### Parameterübergabemechanismen
 #### Call by Value
 Dieses Mechanismus wird standardmäßig von Java verwendet. Dabei wird bei einem Funktionsaufruf von jedem Parameter eine Kopie erzeugt, die in der Funktion sichtbar ist. Ändern dieses Parameters innerhalb der Funktion hat keine Auswirkungen auf den Wert außerhalb der Funktion.
@@ -146,7 +147,19 @@ Solange `child > parent`: Tauschen von `child`mit `parent` node
 3. Zusamenfügen beider sortierten Hälften
 
 ### Stabilität, Laufzeit von Sortieralgorithmen
+#### Stabilität
+Ein Sortieralgorithmus ist stabil, wenn Elemente mit gleichem Suchschlüssel nicht getauscht werden und in gleicher Anordnung wie vor dem Sortieren bleiben.
+#### Übersicht zur Laufzeit
+|Algorithmus|Best Case|Average|Worst Case|
+|-|-|-|-|
+|Insertionsort|O(n)|O(n²)|O(n²)|
+|Selectionsort|O(n²)|O(n²)|O(n²)|
+|Bubblesort|O(n)|O(n²)|O(n²)|
+|Quicksort|O(n log n)|O(n log n)|O(n²)|
+|Mergesort|O(n log n)|O(n log n)|O(n log n)|
+|Heapsort|O(n log n)|O(n log n)|O(n log n)|
 ### Backtracking
+Lösen eines Problems in Schritten. Sobald keine Lösung mehr möglich ist, wird zum letzten Schritt zurückgekehrt, an dem eine Entscheidung anders getroffen werden kann. Somit werden viele Wege zur Lösung probiert bis eine Lösung gefunden wird. Diese Lösung ist im Allgemeinen nicht die einzige oder beste Lösung.
 
 ## Blatt 11
 ### OOP: Konstruktion von Klassenstrukturen
@@ -200,7 +213,10 @@ Klassen können von maximal einer anderen Klasse oder abstrakten Klasse erben. D
 * Können nicht instanziiert werden
 * Vererbung wie bei Klassen Möglich
 ### UML
+So Klassen Diagramme malen und hoffen dass man evtl dem Standard entspricht...
 
 ## Stuff der sonst so relevant erscheint aber anscheinend nicht in der Übung war
 ### Stack
+First In, Last Out
 ### Queue
+First In, First Out
