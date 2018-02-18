@@ -7,15 +7,35 @@
 
 ## Blatt 3
 ### Präzedenzregeln
+1. `[], ., ()`
+2. `i++, i--`
+3. `++i, --i, !b, +1, -1`
+4. `(long), new`
+5. `*, /, %`
+6. `+, -`
+7. `<, >, <=, >=`
+8. `==, !=`
+9. `&&`
+10. `||`
+11. `?:`
+12. Assignment (`=, +=, ...`)
 ### `char` handling
 ### Modulo Operator
 
 ## Blatt 4
 ### Schleifen
+#### `foreach`
+`for (Object o: objectArray) {...}`
+Rest ist trivial. ∎
 ### Zufallszahlen
+`Math.random()` ↦ double ∈ [0,1)
 
 ## Blatt 5
 ### Arrays
+`int[] integerArray = new int[10];`
+`int[] integerArray = new int[]{1, 2, 3};`
+`integerArray[0] = 3;`
+Bei der Übergabe eines Arrays als Parameter einer Funktion wird ein Pointer zu diesem Array übergeben und nicht eine Kopie dieses Arrays.
 
 ## Blatt 6
 ### Überdeckung, Variablen
@@ -23,10 +43,35 @@
 ## Blatt 7
 ### O-Notation
 ### Parameterübergabemechanismen
+#### Call by Value
+Dieses Mechanismus wird standardmäßig von Java verwendet. Dabei wird bei einem Funktionsaufruf von jedem Parameter eine Kopie erzeugt, die in der Funktion sichtbar ist. Ändern dieses Parameters innerhalb der Funktion hat keine Auswirkungen auf den Wert außerhalb der Funktion.
+Achtung: Anderes Verhalten bei Arrays und Objekten.
+#### Call by Reference
+Hierbei wird ein Pointer auf den jeweiligen Parameter übergeben. Zugriffe darauf innerhalb der Funktion greifen auf den gleichen Speicherbereich zu wie Zugriffe von außerhalb der Funktion.
 ### Rekursion
+Wenn bereits verstanden: Gut.
+Wenn nicht: Siehe "Rekursion".
 
 ## Blatt 8
 ### Head-, Tailrekursion
+#### Headrekursion
+Rekursiver Aufruf am Anfang der Funktion.
+```java
+static String headRekursion(int i) {
+    if (i == 0) return "";
+    return headRekursion(i - 1) + i;
+}
+```
+Rückgabe: `12345`
+#### Tailrekursion
+Rekursiver Aufruf am Ende der Funktion.
+```java
+static String tailRekursion(int i) {
+    if (i == 0) return "";
+    return i + tailRekursion(i - 1);
+}
+```
+Rückgabe: `54321`
 
 ## Blatt 9
 ### Lineare, Binäre Suche
@@ -52,6 +97,31 @@ In jeder Iteration wird das kleinste unsortierte Element gewählt und an das End
 
 ## Blatt 10
 ### Sortieralgorithmen: Quick-, Heap-, Mergesort
+#### Quicksort
+"Hard Split Easy Join"
+1. Wählen eines Pivot-Elements `p` (üblicherweise das letzte Element der Liste)
+2. Tauschen des Elements `e > p` an linkester Stelle mit dem Element `f <= p` an rechtester Stelle
+3. Wiederholen von `2` bis alle Elemente `<= p` links von allen Elementen `> p` sind
+4. Ansführen von Quicksort auf den Bereich `<= p`
+5. Ausführen von Quicksort auf den Bereich `> p`
+6. Einsortieren von `p`zwischen beide Bereiche
+#### Heapsort
+##### `make heap`
+Einordnen der Elemente in einen Binärbaum sodass der `parent` node immer größer als beide `child` nodes ist
+1. Element wird am Ende des heaps ("rechts unten", Ebenen vollständig füllen) eingefügt
+2. `heapify()`
+##### `heapify`
+Solange `child > parent`: Tauschen von `child`mit `parent` node
+##### Sortieren
+1. Entnehmen des Wurzelknotens
+2. Ersetzen der Wurzel mit letztem node im heap
+3. `heapify()`
+#### Mergesort
+"Easy Split Hard Join"
+1. Aufteilen der Menge in 2 Hälften
+2. Anwenden von Mergesort auf beide Hälften
+3. Zusamenfügen beider sortierten Hälften
+
 ### Stabilität, Laufzeit von Sortieralgorithmen
 ### Backtracking
 
