@@ -29,7 +29,7 @@
 12. Assignment (`=, +=, ...`)
 ### `char` handling
 * `String Character.toString(char c)`
-* * `String String.valueOf(char c)`
+* `String String.valueOf(char c)`
 ### Modulo Operator
 In Java ist `%` eigentlich der "remainder" operator...
 * `9 % 4 = 1`
