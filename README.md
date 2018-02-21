@@ -192,10 +192,13 @@ Ein Node des Baumes zeigt auf maximal 2 Child-Nodes.
 ### Traversierungen von Bäumen
 #### Pre Order
 Reihenfolge: `this`, `left`, `right`
+Analog:  `"links vorbei"`
 #### In Order
 Reihenfolge: `left`, `this`, `right`
+Analog:  `"unten durch"`
 #### Post Order
 Reihenfolge: `left`, `right`, `this`
+Analog:  `"rechts vorbei"`
 ### Suchbaum
 Ein Sortierter Baum wird dadurch erzeugt, dass Elemente abhängig von einem Wert im Baum einsortiert werden. Beispiel: Das kleinere Element wird links einsortiert.
 ### OOP: Vererbung, Abstrakte Klassen
