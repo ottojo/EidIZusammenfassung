@@ -1,5 +1,8 @@
 # EidI Übung Zusammenfassung
 ## Übungsblatt 1
+### Algorithmen
+* terminiert wenn er nach endlich vielen Schritten zu einem Ende kommt
+* determiniert wenn er für die gleiche Eingabe immer die gleiche Ausgabe produziert
 ### Laufzeitberechnung
 
 ## Blatt 2
@@ -203,6 +206,9 @@ Ein Sortierter Baum wird dadurch erzeugt, dass Elemente abhängig von einem Wert
 Klassen können von maximal einer anderen Klasse oder abstrakten Klasse erben. Dabei werden Parameter und Methoden übernommen. Zugriff auf `public` oder `protected` Member der Oberklasse möglich, Zugriff auf `private` Member nicht möglich.
 #### Abstrakte Klasse
 * Kann nicht instanziiert werden
+* können nicht static deklariert werden
+* können nicht abstrakte Methoden enthalten
+* können nicht final deklariert werden
 #### Abstrakte Methode
 * Definiert nur Signatur
 * Muss in Unterklassen überschrieben werden
@@ -212,6 +218,8 @@ Klassen können von maximal einer anderen Klasse oder abstrakten Klasse erben. D
 * Können wie Datentypen verwendet werden
 * Können nicht instanziiert werden
 * Vererbung wie bei Klassen Möglich
+* Können nicht static deklariert werden
+* können nicht final deklariert werden
 ### UML
 So Klassen Diagramme malen und hoffen dass man evtl dem Standard entspricht...
 
