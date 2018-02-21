@@ -206,9 +206,9 @@ Ein Sortierter Baum wird dadurch erzeugt, dass Elemente abhängig von einem Wert
 Klassen können von maximal einer anderen Klasse oder abstrakten Klasse erben. Dabei werden Parameter und Methoden übernommen. Zugriff auf `public` oder `protected` Member der Oberklasse möglich, Zugriff auf `private` Member nicht möglich.
 #### Abstrakte Klasse
 * Kann nicht instanziiert werden
-* können nicht static deklariert werden
-* können nicht abstrakte Methoden enthalten
-* können nicht final deklariert werden
+* Kann nicht static deklariert werden
+* Kann nicht abstrakte Methoden enthalten
+* Kann nicht final deklariert werden
 #### Abstrakte Methode
 * Definiert nur Signatur
 * Muss in Unterklassen überschrieben werden
@@ -216,10 +216,10 @@ Klassen können von maximal einer anderen Klasse oder abstrakten Klasse erben. D
 ## Themen nach Blatt 14
 ### Interfaces
 * Können wie Datentypen verwendet werden
-* Können nicht instanziiert werden
+* Kann nicht instanziiert werden
 * Vererbung wie bei Klassen Möglich
-* Können nicht static deklariert werden
-* können nicht final deklariert werden
+* Kann nicht static deklariert werden
+* Kann nicht final deklariert werden
 ### UML
 So Klassen Diagramme malen und hoffen dass man evtl dem Standard entspricht...
 
