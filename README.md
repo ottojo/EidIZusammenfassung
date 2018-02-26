@@ -64,7 +64,7 @@ Bei der Übergabe eines Arrays als Parameter einer Funktion wird ein Pointer zu 
 
 ## Blatt 7
 ### O-Notation
-`O(1) < O(log n) < O(√n) < O(n log n) < O(n²) O(2ⁿ) < O(n!) < O(nⁿ)`
+`O(1) < O(log n) < O(√n) < O(n) < O(n log n) < O(n²) O(2ⁿ) < O(n!) < O(nⁿ)`
 ### Parameterübergabemechanismen
 #### Call by Value
 Dieses Mechanismus wird standardmäßig von Java verwendet. Dabei wird bei einem Funktionsaufruf von jedem Parameter eine Kopie erzeugt, die in der Funktion sichtbar ist. Ändern dieses Parameters innerhalb der Funktion hat keine Auswirkungen auf den Wert außerhalb der Funktion.
