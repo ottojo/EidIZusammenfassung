@@ -92,8 +92,11 @@ Rückgabe: `12345`
 Rekursiver Aufruf am Ende der Funktion.
 ```java
 static String tailRekursion(int i) {
-    if (i == 0) return "";
-    return i + tailRekursion(i - 1);
+    return tailRekursion(i, "");
+}
+static String tailRekursion(int i, String s) {
+    if (i == 0) return s;
+    return tailRekursion(i - 1, s + i);
 }
 ```
 Rückgabe: `54321`
