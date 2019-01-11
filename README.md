@@ -94,6 +94,7 @@ Rekursiver Aufruf am Ende der Funktion.
 static String tailRekursion(int i) {
     return tailRekursion(i, "");
 }
+
 static String tailRekursion(int i, String s) {
     if (i == 0) return s;
     return tailRekursion(i - 1, s + i);
